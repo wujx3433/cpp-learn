@@ -2,8 +2,9 @@
 using namespace std;
 
 int main(){
-    int arr[]={1,2,3,5,8,4,6,9,7};
-    int count=sizeof(arr)/sizeof(arr[0]);
+    int count, arr[1000] = { 0 };
+    cin >> count;
+    for (int i = 0; i < count; i++) cin >> arr[i];
     for(int i=0;i<count-1;i++){
         for(int j=0;j<count-i-1;j++){
             if(arr[j]>arr[j+1]){
