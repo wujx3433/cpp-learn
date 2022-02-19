@@ -12,12 +12,12 @@ int main()
 	m = max(sizea, sizeb);
 	//倒序相加，按大小确定谁加谁
 	if (sizea > sizeb) {
-		for (int i = 0; i < sizea; i++) x[i] = a[sizea - i - 1] - 48;
-		for (int j = 0; j < sizeb; j++) x[j] += b[sizeb - j - 1] - 48;
+		for (int i = 0; i < sizea; i++) x[i] = a[sizea - i - 1] - '0';
+		for (int j = 0; j < sizeb; j++) x[j] += b[sizeb - j - 1] - '0';
 	}
 	else{
-		for (int i = 0; i < sizeb; i++) x[i] = b[sizeb - i - 1] - 48;
-		for (int j = 0; j < sizea; j++) x[j] += a[sizea - j - 1] - 48;
+		for (int i = 0; i < sizeb; i++) x[i] = b[sizeb - i - 1] - '0';
+		for (int j = 0; j < sizea; j++) x[j] += a[sizea - j - 1] - '0';
 	}
 	//处理进位
 	for (int i = 0; i < m; i++) {
